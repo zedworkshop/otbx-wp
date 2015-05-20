@@ -33,17 +33,13 @@
 
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/bower_components/imagesloaded/imagesloaded.pkgd.js"></script>
 	<script>
-
   		var el = document.getElementById('bg-home');
-
   		if(el) {
-
 			imagesLoaded( el, function( instance ) {
-				el.className += el.className ? ' show-bg' : 'show-bg';
+  				var main = document.getElementById('main');
+				main.className += main.className ? ' show-bg' : 'show-bg';
 			});
-
 		}
-
 	</script>
 
 </body>

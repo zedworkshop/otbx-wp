@@ -13,15 +13,39 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
+
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/bower_components/modernizr/modernizr.js"></script>
+	<meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon.ico">
+
+    <!-- SEO -->
+    <meta name="description" content="Old Town Beer Exchange (OTBX) is a craft beer and wine store located in the Quigley Entertainment District in Downtown Huntsville, Alabama.">
+
+    <!-- Social: Facebook / Open Graph -->
+    <meta property="fb:admins" content="503386332"/>
+    <meta property="fb:admins" content="574394256"/>
+    <meta property="fb:app_id" content="1407866092842844">
+    <meta property="og:url" content="http://otbxhsv.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Old Town Beer Exchange">
+    <meta property="og:image" content="http://otbxhsv.com/images/fb.png"/>
+    <meta property="og:description" content="OTBX is a beer and wine retailer in downtown Huntsville, AL. We exist to cultivate the craft beer and wine snob that exists in all of us.">
+    <meta property="og:site_name" content="[OTBX] Old Town Beer Exchange">
+    <meta property="article:publisher" content="https://www.facebook.com/zedworkshop">
+
+    <!-- Social: Google+ / Schema.org  -->
+    <meta itemprop="name" content="Old Town Beer Exchange">
+    <meta itemprop="description" content="Old Town Beer Exchange (OTBX) is a craft beer and wine store located in the Quigley Entertainment District in Downtown Huntsville, Alabama.">
+    <meta itemprop="image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/img/fb.png">
 
 	<!--[if lt IE 9]>
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
+
+	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/bower_components/modernizr/modernizr.js"></script>
 
 	<script src="//use.typekit.net/xlj7cxc.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
@@ -78,7 +102,7 @@
 		</header><!-- .site-header -->
 
 		<?php if(is_front_page()) : ?>
-		<main class="[ sm-col sm-col-7 ] [ full-height relative ] main" role="main">
+		<main class="[ sm-col sm-col-7 ] [ full-height relative ] main" role="main" id="main">
 		<?php else: ?>
 		<main class="[ sm-col sm-col-8 lg-col-8 xl-col-6 ] [ bg-white shadowed full-height relative py2 ] main" role="main">
 		<?php endif; ?>
