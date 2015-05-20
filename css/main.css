@@ -1785,7 +1785,7 @@ input[type=range] {
   .h1-responsive {
     font-size: 4vw; } }
 
-@media (min-width: 80em) {
+@media (min-width: 84em) {
   .h00-responsive {
     font-size: 7.68rem; }
   .h0-responsive {
@@ -2224,7 +2224,7 @@ p, dl, ol, ul {
 .small {
   font-size: 13px; }
 
-@media (min-width: 80em) {
+@media (min-width: 84em) {
   .xl-col {
     float: left;
     box-sizing: border-box; }
@@ -2256,6 +2256,9 @@ p, dl, ol, ul {
   .xl-col-12 {
     width: 100%; } }
 
+html {
+  height: 100%; }
+
 body {
   background-color: #f5f5f5;
   color: #323232; }
@@ -2274,7 +2277,6 @@ body {
     .main {
       border-top: 4rem solid #f5f5f5;
       margin-left: 33.33333%;
-      box-shadow: rgba(0, 0, 0, 0.25) -10px 0 20px;
       height: 100%;
       padding-top: 2rem; } }
 
@@ -2344,6 +2346,9 @@ body {
   @media (min-width: 40em) {
     .main-navigation {
       margin-bottom: 4rem; } }
+  @media (min-width: 64em) {
+    .main-navigation .button {
+      font-size: 1.6rem; } }
 
 .site-footer {
   border-top: 1px solid #ddd; }
@@ -2375,6 +2380,9 @@ Backgrounds
 .bg-brand-secondary {
   background-color: #993333; }
 
+.shadowed {
+  box-shadow: rgba(0, 0, 0, 0.25) -10px 0 20px; }
+
 /*
 
 Alignment
@@ -2404,6 +2412,98 @@ Layout
 .button {
   font-size: 14px; }
 
+/*
+
+	Homepage
+
+*/
+.home .main {
+  background-color: #323232;
+  border-top: none;
+  max-width: none;
+  overflow: hidden; }
+.home .tagline {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3; }
+  .home .tagline .gray {
+    color: #fff;
+    color: rgba(255, 255, 255, 0.6); }
+.home .site-footer {
+  background: #323232;
+  border: 0 transparent;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+@media (min-width: 40em) {
+  .home, .home .full-height {
+    height: 100%;
+    min-height: 0; }
+  .home .main {
+    margin-left: 41.66667%; }
+  .home .tagline {
+    top: 2.5%; }
+  .home .site-footer {
+    background: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+    .home .site-footer .gray {
+      color: #fff;
+      color: rgba(255, 255, 255, 0.7); } }
+
+.bg-home {
+  background-image: url(../img/bg-home-sm.jpg);
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: scale(1.05) translateX(2%) translateY(2%);
+      -ms-transform: scale(1.05) translateX(2%) translateY(2%);
+          transform: scale(1.05) translateX(2%) translateY(2%);
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-duration: 2500ms;
+  transition-delay: 500ms; }
+  .bg-home.show-bg {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0);
+        -ms-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0); }
+  @media (min-width: 40em) {
+    .bg-home {
+      background-image: url(../img/bg-home.jpg);
+      background-position: left center; } }
+
+.home-content {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 6rem;
+  padding-bottom: 0; }
+  .home-content .h2 {
+    font-size: 1.3rem; }
+  @media (min-width: 40em) {
+    .home-content {
+      padding-top: 35%;
+      padding-left: 4rem;
+      padding-right: 4rem; }
+      .home-content .h2 {
+        font-size: 2rem; } }
+  @media (min-width: 84em) {
+    .home-content {
+      padding-top: 25%; } }
+
+@media (min-width: 84em) {
+  .home-title {
+    font-size: 48px; } }
+
+/*
+
+	Blog pages
+
+*/
 .post-thumbnail {
   display: block;
   margin-left: -1rem;
@@ -2470,3 +2570,39 @@ Layout
 .form-allowed-tags code {
   display: block;
   font-size: 12px; }
+
+/*
+
+	Beer page
+
+*/
+.beerlist-list {
+  padding: 0; }
+@media (min-width: 40em) {
+  .beerlist {
+    margin-left: 4rem;
+    margin-right: 4rem; } }
+
+.beeritem__logo {
+  margin: 0;
+  padding: 0; }
+
+.percentbar {
+  border-radius: 2px;
+  overflow: hidden;
+  height: 10px;
+  background: #ddd; }
+  .percentbar div {
+    height: 10px; }
+
+/*
+
+	General pages
+
+*/
+.page .post-thumbnail {
+  margin-left: 0;
+  margin-right: 0; }
+@media (min-width: 40em) {
+  .page .main {
+    padding-top: 0; } }

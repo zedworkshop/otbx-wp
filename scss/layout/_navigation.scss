@@ -17,4 +17,11 @@
 	@media #{$breakpoint-sm} {
 		margin-bottom: $space-4;
 	}
+
+	@media #{$breakpoint-lg} {
+
+		.button {
+			font-size: $h3;
+		}
+	}
 }

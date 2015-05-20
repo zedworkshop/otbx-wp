@@ -10,7 +10,7 @@
  */
 ?>
 
-			<footer id="colophon" class="[ content mt4 py4 right-align ] site-footer" role="contentinfo">
+			<footer id="colophon" class="[ mt4 py4 center relative z4 ] site-footer" role="contentinfo">
 				<div class="site-info">
 					<p class="[ xsmall gray mb0 ]">Copyright &copy; <?php echo date('Y'); ?> Old Town Beer Exchange</p>
 					<p class="[ xsmall gray mb0 ]">Built by <a class="gray" href="http://zedworkshop.com/" target="_blank">Zed Workshop</a></p>
@@ -31,6 +31,20 @@
 
 	</div><!-- .wrapper -->
 
+	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/bower_components/imagesloaded/imagesloaded.pkgd.js"></script>
+	<script>
+
+  		var el = document.getElementById('bg-home');
+
+  		if(el) {
+
+			imagesLoaded( el, function( instance ) {
+				el.className += el.className ? ' show-bg' : 'show-bg';
+			});
+
+		}
+
+	</script>
 
 </body>
 </html>

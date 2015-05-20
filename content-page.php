@@ -9,16 +9,18 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 	<?php
 		// Post thumbnail.
 		twentyfifteen_post_thumbnail();
 	?>
 
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+	<header class="[ mb4 center ] entry-header">
+		<?php the_title( '<h1 class="[ caps ] entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="[ content ] entry-content">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(

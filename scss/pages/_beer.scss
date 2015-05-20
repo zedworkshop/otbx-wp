@@ -1,0 +1,37 @@
+/*
+
+	Beer page
+
+*/
+
+.beerlist {
+
+	&-list {
+		padding: 0;
+	}
+
+	@media #{$breakpoint-sm} {
+		margin-left: $space-4;
+		margin-right: $space-4;
+	}
+}
+
+.beeritem {
+
+	&__logo {
+		margin: 0;
+		padding: 0;
+	}
+
+}
+
+.percentbar {
+	border-radius: 2px;
+	overflow: hidden;
+	height: 10px;
+	background: #ddd;
+
+	div {
+		height: 10px;
+	}
+}

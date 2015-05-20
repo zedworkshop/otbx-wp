@@ -1,0 +1,22 @@
+/*
+
+	General pages
+
+*/
+
+.page {
+
+	.post-thumbnail {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	@media #{$breakpoint-sm} {
+
+		.main {
+			padding-top: 0;
+		}
+
+	}
+
+}

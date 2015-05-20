@@ -10,7 +10,7 @@
 get_header(); ?>
 
 	<header class="[ mt3 mb4 center ]">
-		<h2 class="[ caps h5 ]"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Journal</a></h2>
+		<h2 class="[ caps h5 ]"><a href="<?php echo esc_url( home_url( '/journal/' ) ); ?>" rel="home">Journal</a></h2>
 	</header>
 
 	<div class="[ mb4 ] content">

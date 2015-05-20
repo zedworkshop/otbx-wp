@@ -21,7 +21,7 @@ get_header(); ?>
 	<?php if ( have_posts() ) : ?>
 
 		<header class="[ mt3 mb4 center ]">
-			<h5 class="[ caps ]"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Journal</a></h5>
+			<h5 class="[ caps serif regular ]"><a href="<?php echo esc_url( home_url( '/journal/' ) ); ?>" rel="home">Journal</a></h5>
 			<?php
 				the_archive_title( '<h1 class="[ h2 caps ] page-title">', '</h2>' );
 				the_archive_description( '<div class="taxonomy-description">', '</div>' );

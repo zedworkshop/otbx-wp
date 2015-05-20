@@ -31,7 +31,7 @@
  * @since Twenty Fifteen 1.0
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 660;
+	$content_width = 900;
 }
 
 /**
@@ -78,7 +78,7 @@ function twentyfifteen_setup() {
 	 * See: https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 825, 510, true );
+	set_post_thumbnail_size( 900, 600, true );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(

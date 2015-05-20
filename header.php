@@ -31,7 +31,11 @@
 
 	<div class="[ clearfix full-height ] wrapper">
 
+		<?php if(is_front_page()) : ?>
+		<header class="[ sm-col sm-col-5 full-height ] [ sm-flex flex-column ] siteheader" role="banner">
+		<?php else: ?>
 		<header class="[ sm-col sm-col-4 full-height ] [ sm-flex flex-column ] siteheader" role="banner">
+		<?php endif; ?>
 
 			<div class="[ center p2 full-width ] site-branding">
 				<a class="[ ] logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img alt="<?php bloginfo( 'name' ); ?> logo" src="<?php echo  get_template_directory_uri(); ?>/img/logo.png" /></a>
@@ -73,7 +77,11 @@
 
 		</header><!-- .site-header -->
 
-		<main class="[ sm-col sm-col-8 lg-col-8 xl-col-6 ] [ bg-white full-height relative py2 ] main" role="main">
+		<?php if(is_front_page()) : ?>
+		<main class="[ sm-col sm-col-7 ] [ full-height relative ] main" role="main">
+		<?php else: ?>
+		<main class="[ sm-col sm-col-8 lg-col-8 xl-col-6 ] [ bg-white shadowed full-height relative py2 ] main" role="main">
+		<?php endif; ?>
 
 			<div class="[ full-width p2 left-0 top-0 ] tagline">
 				<div class="clearfix">
