@@ -1,0 +1,83 @@
+<?php
+/**
+ * The template for displaying the header
+ *
+ * Displays all of the head element and everything up until the "site-content" div.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Fifteen
+ * @since Twenty Fifteen 1.0
+ */
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?> class="no-js full-height">
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
+	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/bower_components/modernizr/modernizr.js"></script>
+
+	<!--[if lt IE 9]>
+	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
+	<![endif]-->
+	<?php wp_head(); ?>
+
+	<script src="//use.typekit.net/xlj7cxc.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body <?php body_class('full-height'); ?>>
+
+	<div class="[ clearfix full-height ] wrapper">
+
+		<header class="[ sm-col sm-col-4 full-height ] [ sm-flex flex-column ] siteheader" role="banner">
+
+			<div class="[ center p2 full-width ] site-branding">
+				<a class="[ ] logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img alt="<?php bloginfo( 'name' ); ?> logo" src="<?php echo  get_template_directory_uri(); ?>/img/logo.png" /></a>
+				<!-- <button class="secondary-toggle"><?php _e( 'Menu and widgets', 'twentyfifteen' ); ?></button> -->
+			</div><!-- .site-branding -->
+
+			<nav class="[ clearfix mb2 ] main-navigation">
+				<?php
+				if ( has_nav_menu( 'primary' ) ) :
+
+					// Primary navigation menu.
+					$cleanermenu = wp_nav_menu([
+						'theme_location' 	=> 'primary',
+					  	'container'       	=> false,
+					  	'items_wrap' 		=> '%3$s',
+					  	'depth'           	=> 0,
+					  	'echo'				=> false
+					]);
+
+					// Find the closing bracket of each li and the opening of the link, then all instances of "li"
+					$find = ['><a', 'li'];
+
+					// Replace the former with nothing (a.k.a. delete) and the latter with "a"
+					$replace = ['', 'a'];
+
+					echo str_replace( $find, $replace, $cleanermenu );
+
+				endif;
+				?>
+			</nav>
+			<!-- .main-navigation -->
+
+			<div class="[ full-width px2 ] contact">
+				<div class="clearfix">
+					<p class="[ col-right col-4 right-align ] [ sm-col-12 sm-center ] small white">M - W  11am - 9pm<br />Th - S  11am - 10pm<br />Closed Sunday</p>
+					<p class="[ col col-4 ] [ sm-col-12 sm-center ] small white">301 Holmes Ave <br />Huntsville, Alabama 35801</p>
+				</div>
+			</div>
+
+		</header><!-- .site-header -->
+
+		<main class="[ sm-col sm-col-8 lg-col-8 xl-col-6 ] [ bg-white full-height relative py2 ] main" role="main">
+
+			<div class="[ full-width p2 left-0 top-0 ] tagline">
+				<div class="clearfix">
+					<p class="[ caps small gray center bold mb0 ]">Southern &times; Craft &times; Culture</p>
+				</div>
+			</div>
+
