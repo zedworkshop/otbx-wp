@@ -49,8 +49,8 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('html', ['styles'], function () {
-    var jsFilter = $.filter('**/*.js');
-    var cssFilter = $.filter('**/*.css');
+    var jsFilter = $.filter('js/*.js');
+    var cssFilter = $.filter('css/*.css');
     var assets = $.useref.assets();
 
     return gulp.src(paths.dev + '/build.html')
@@ -59,26 +59,23 @@ gulp.task('html', ['styles'], function () {
         .pipe($.uglify({preserveComments: $.uglifySaveLicense}))
         .pipe(jsFilter.restore())
         .pipe(cssFilter)
-        // .pipe($.replace('bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap','fonts'))
-        // .pipe($.combineMediaQueries())
         .pipe($.csso())
         .pipe(cssFilter.restore())
         .pipe(assets.restore())
         .pipe($.useref())
-        // .pipe($.revReplace())
         .pipe(gulp.dest(paths.build))
         .pipe($.size())
         .pipe($.notify('CSS and JS concatted and minified'));
 });
 
 gulp.task('images', function () {
-    return gulp.src(paths.dev + '/images/**/*')
+    return gulp.src(paths.dev + '/img/**/*')
         .pipe($.cache($.imagemin({
             optimizationLevel: 3,
             progressive: true,
             interlaced: true
         })))
-        .pipe(gulp.dest(paths.build + '/images'))
+        .pipe(gulp.dest(paths.build + '/img'))
         .pipe($.size())
         .pipe($.notify('Images minified'));
 });

@@ -229,16 +229,25 @@ function twentyfifteen_scripts() {
 	// Add Genericons, used in the main stylesheet.
 	// wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.2' );
 
-	// Load our main stylesheet.
-	wp_enqueue_style( 'twentyfifteen-style', get_stylesheet_uri() );
+	if(WP_ENV == 'production') {
 
-	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'twentyfifteen-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentyfifteen-style' ), '20141010' );
-	wp_style_add_data( 'twentyfifteen-ie', 'conditional', 'lt IE 9' );
+		// Load our main stylesheet.
+	    wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/dist/css/main.css', null, null, 'all' );
 
-	// Load the Internet Explorer 7 specific stylesheet.
-	wp_enqueue_style( 'twentyfifteen-ie7', get_template_directory_uri() . '/css/ie7.css', array( 'twentyfifteen-style' ), '20141010' );
-	wp_style_add_data( 'twentyfifteen-ie7', 'conditional', 'lt IE 8' );
+	    // Load scripts
+	    wp_enqueue_script( 'theme-scripts-init', get_template_directory_uri() . '/dist/js/init.js', [], null, false );
+	    wp_enqueue_script( 'theme-scripts-main', get_template_directory_uri() . '/dist/js/main.js', [], null, true );
+
+	} else {
+
+		// Load our main stylesheet.
+		wp_enqueue_style( 'theme-styles', get_stylesheet_uri() );
+
+	    wp_enqueue_script( 'theme-scripts-init', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', [], null, false );
+	    wp_enqueue_script( 'theme-scripts-main', get_template_directory_uri() . '/bower_components/imagesloaded/imagesloaded.pkgd.js', [], null, false );
+
+	}
+
 
 	// wp_enqueue_script( 'twentyfifteen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20141010', true );
 

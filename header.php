@@ -45,8 +45,6 @@
 	<![endif]-->
 	<?php wp_head(); ?>
 
-	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/bower_components/modernizr/modernizr.js"></script>
-
 	<script src="//use.typekit.net/xlj7cxc.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 </head>

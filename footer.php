@@ -25,13 +25,13 @@
 				</div><!-- .site-info -->
 			</footer><!-- .site-footer -->
 
-			<?php wp_footer(); ?>
 
 		</main><!-- .main -->
 
 	</div><!-- .wrapper -->
 
-	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/bower_components/imagesloaded/imagesloaded.pkgd.js"></script>
+	<?php wp_footer(); ?>
+
 	<script>
   		var el = document.getElementById('bg-home');
   		if(el) {
