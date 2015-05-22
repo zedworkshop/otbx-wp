@@ -30,7 +30,7 @@
     <meta property="og:url" content="http://otbxhsv.com">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Old Town Beer Exchange">
-    <meta property="og:image" content="http://otbxhsv.com/images/fb.png"/>
+    <meta property="og:image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/img/fb.png"/>
     <meta property="og:description" content="OTBX is a beer and wine retailer in downtown Huntsville, AL. We exist to cultivate the craft beer and wine snob that exists in all of us.">
     <meta property="og:site_name" content="[OTBX] Old Town Beer Exchange">
     <meta property="article:publisher" content="https://www.facebook.com/zedworkshop">
@@ -38,7 +38,7 @@
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="Old Town Beer Exchange">
     <meta itemprop="description" content="Old Town Beer Exchange (OTBX) is a craft beer and wine store located in the Quigley Entertainment District in Downtown Huntsville, Alabama.">
-    <meta itemprop="image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/img/fb.png">
+    <meta itemprop="image" content="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/img/fb.png">
 
 	<!--[if lt IE 9]>
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
@@ -92,8 +92,8 @@
 
 			<div class="[ full-width px2 ] contact">
 				<div class="clearfix">
-					<p class="[ col-right col-4 right-align ] [ sm-col-12 sm-center ] small white">M - W  11am - 9pm<br />Th - S  11am - 10pm<br />Closed Sunday</p>
-					<p class="[ col col-4 ] [ sm-col-12 sm-center ] small white">301 Holmes Ave <br />Huntsville, Alabama 35801</p>
+					<p class="[ col-right col-6 sm-col-4 right-align ] [ sm-col-12 sm-center ] small white">M - W  11am - 9pm<br />Th - S  11am - 10pm<br />Closed Sunday</p>
+					<p class="[ col col-6 sm-col-4 ] [ sm-col-12 sm-center ] small white">301 Holmes Ave <br />Huntsville, Alabama 35801</p>
 				</div>
 			</div>
 

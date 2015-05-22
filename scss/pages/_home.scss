@@ -125,6 +125,12 @@
 
 .home-title {
 
+	font-size: $h1 * 0.9;
+
+	@media #{$breakpoint-sm} {
+		font-size: $h1;
+	}
+
 	@media #{$breakpoint-xl} {
 		font-size: 48px;
 	}

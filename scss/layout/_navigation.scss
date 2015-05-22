@@ -10,12 +10,15 @@
 	.button {
 		font-size: $h4;
 		font-style: italic;
-		margin-left: $space-1;
-		margin-right: $space-1;
 	}
 
 	@media #{$breakpoint-sm} {
 		margin-bottom: $space-4;
+
+		.button {
+			margin-left: $space-1;
+			margin-right: $space-1;
+		}
 	}
 
 	@media #{$breakpoint-lg} {

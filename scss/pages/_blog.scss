@@ -89,19 +89,25 @@
 
 // Comment form
 
+.comment-respond {
+
+	.field-light,
+	input,
+	textarea {
+		max-width: 100%;
+	}
+
+	textarea {
+		height: 100px;
+	}
+
+}
+
 .comment-reply-title {
 	font-family: $sans-serif;
 	font-size: $h5;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
-}
-
-.comment-form-comment {
-
-	textarea {
-		height: 100px;
-		max-width: 100%;
-	}
 }
 
 .form-allowed-tags {

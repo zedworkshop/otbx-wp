@@ -105,6 +105,11 @@
 	        $oz_remaining = $beverage['MenuItemProductDetail']['EstimatedOzLeft'];
 	        $scale = 1.0; //
 
+	        // Sanity-check ABV
+	        if($beverage_abv > 30) {
+	        	$beverage_abv = $beverage_abv/10;
+	        }
+
 
 		    //calculating percentage of keg remaining
 		    // Get Percentage out of 100
