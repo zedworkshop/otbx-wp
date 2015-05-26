@@ -11,7 +11,7 @@
 ?>
 
 			<footer id="colophon" class="[ mt4 py4 center relative z4 ] site-footer" role="contentinfo">
-				<div class="site-info">
+				<div class="[ mb2 ] site-info">
 					<p class="[ xsmall gray mb0 ]">Copyright &copy; <?php echo date('Y'); ?> Old Town Beer Exchange</p>
 					<p class="[ xsmall gray mb0 ]">Built by <a class="gray" href="http://zedworkshop.com/" target="_blank">Zed Workshop</a></p>
 					<?php
@@ -23,6 +23,16 @@
 						do_action( 'twentyfifteen_credits' );
 					?>
 				</div><!-- .site-info -->
+
+				<?php if( !is_front_page()) : ?>
+				<div class="mb2">
+					<div class="fb-like" data-href="http://otbxhsv.com" data-layout="button_count" data-action="recommend" data-show-faces="false" data-share="true"></div>
+				</div>
+				<div>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://otbxhsv.com" data-via="otbxhsv">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</div>
+				<?php endif; ?>
 			</footer><!-- .site-footer -->
 
 

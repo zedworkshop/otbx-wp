@@ -109,10 +109,12 @@
 	}
 
 	@media #{$breakpoint-sm} {
-		padding-top: 35%;
+		padding-top: 32%;
 		padding-left: $space-4;
 		padding-right: $space-4;
+	}
 
+	@media #{$breakpoint-md} {
 		.h2 {
 			font-size: $h2;
 		}
@@ -121,13 +123,17 @@
 	@media #{$breakpoint-xl} {
 		padding-top: 25%
 	}
+
+	@media (min-width: 52em) and (max-height: 700px) {
+		padding-top: 100px;
+	}
 }
 
 .home-title {
 
-	font-size: $h1 * 0.9;
+	font-size: $h1 * 0.8;
 
-	@media #{$breakpoint-sm} {
+	@media #{$breakpoint-md} {
 		font-size: $h1;
 	}
 
