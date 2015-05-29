@@ -2404,6 +2404,9 @@ Alignment
   .lg-right-align {
     text-align: right; } }
 
+.middle {
+  vertical-align: middle; }
+
 /*
 
 Layout
@@ -2537,6 +2540,8 @@ Layout
       margin-left: -4rem;
       margin-right: 0; } }
 
+.single-post .avatar {
+  border-radius: 50%; }
 .single-post .post-thumbnail {
   margin-bottom: 1rem; }
 @media (min-width: 40em) {

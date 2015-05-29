@@ -34,6 +34,18 @@
 
 		<div class="[ xl-col xl-col-8 ] mb4">
 
+			<div class="[ table mb3 ]">
+				<div class="[ inline-block middle mr1 ]">
+				<?php
+	   			echo get_avatar( get_the_author_meta('user_email'), $size = '50' );
+	   			?>
+	   			</div>
+				<div class="[ inline-block middle bold ]">
+					<span class="[ block xsmall gray caps regular ]">Written by</span>
+					<?php the_author(); ?>
+				</div>
+			</div>
+
 			<?php
 				/* translators: %s: Name of current post */
 				the_content( sprintf(
