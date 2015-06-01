@@ -37,7 +37,7 @@
 			<div class="[ table mb3 ]">
 				<div class="[ inline-block middle mr1 ]">
 				<?php
-	   			echo get_avatar( get_the_author_meta('user_email'), $size = '50' );
+	   			echo get_avatar( get_the_author_meta('user_email'), $size = '60' );
 	   			?>
 	   			</div>
 				<div class="[ inline-block middle bold ]">
