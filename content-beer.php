@@ -29,13 +29,25 @@
 
 		<?php
 
+		function addhttp($url) {
+
+			if($url == '') {
+				return $url;
+			}
+
+		    if (!preg_match("~^(?:f|ht)tps?://~i", $url)) {
+		        $url = "http://" . $url;
+		    }
+		    return $url;
+		}
+
 		$api = 'https://server.digitalpour.com/DashboardServer/api/v3/MenuItems/5502506cb3b70304a8f2e0d2/1/Tap?apiKey=55071e14b3b6f60e9c675851';
 
 		// $ch =  curl_init($api);
 		// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		// $string = curl_exec($ch);
 
-		$arrContextOptions=array(
+		$arrContextOptions = array(
 		    "ssl"=>array(
 		        "verify_peer"=>false,
 		        "verify_peer_name"=>false,
@@ -95,6 +107,9 @@
 	                $producer_url = $beverage['MenuItemProductDetail']['Beverage']['SoftDrinkMaker']['Url'];
 	                break;
 	        }
+
+	        $producer_url = addhttp($producer_url);
+	        $producer_url = str_replace('http//', 'http://', $producer_url);
 
 	        $date_put_on = $beverage['DatePutOn'];
 	        $bottle_size = $beverage['MenuItemProductDetail']['Prices'][0]['Size'];
@@ -175,7 +190,7 @@
 			        <h5 class="[ bold dark mb1 mt0 ] beeritem__producer" title="Tap: <?php echo $item_name; ?>">
 				        <?php
 				        if(!empty($producer_url)) {
-				        	echo '<a href="http://' . $producer_url . '" target="_blank">' . $producer_name . '</a>';
+				        	echo '<a href="' . $producer_url . '" target="_blank">' . $producer_name . '</a>';
 				        } else {
 							echo $producer_name;
 				        }
