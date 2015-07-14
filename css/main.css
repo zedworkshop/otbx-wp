@@ -2551,6 +2551,11 @@ Layout
   .single-post .post-thumbnail {
     margin-left: -8rem; } }
 
+@media (min-width: 64em) {
+  .single-format-video .entry-video {
+    margin-right: -4rem;
+    margin-left: -8rem; } }
+
 .comment-list {
   list-style-type: none;
   margin: 0 0 4rem;

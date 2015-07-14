@@ -45,6 +45,17 @@
 
 }
 
+// Videos
+
+.single-format-video {
+	@media #{$breakpoint-lg} {
+		.entry-video {
+			margin-right: -$space-4;
+			margin-left: -$space-4 * 2;
+		}
+	}
+}
+
 // Comments
 
 .comment-list {

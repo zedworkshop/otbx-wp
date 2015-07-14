@@ -234,7 +234,11 @@ function twentyfifteen_scripts() {
 		wp_enqueue_style( 'theme-styles', get_stylesheet_uri() );
 
 	    wp_enqueue_script( 'theme-scripts-init', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', [], null, false );
-	    wp_enqueue_script( 'theme-scripts-main', get_template_directory_uri() . '/bower_components/imagesloaded/imagesloaded.pkgd.js', [], null, false );
+
+	    wp_enqueue_script( 'theme-scripts-jquery', get_template_directory_uri() . '/bower_components/jquery/dist/jquery.js', [], null, true );
+	    wp_enqueue_script( 'theme-scripts-imagesloaded', get_template_directory_uri() . '/bower_components/imagesloaded/imagesloaded.pkgd.js', [], null, true );
+	    wp_enqueue_script( 'theme-scripts-fitvids', get_template_directory_uri() . '/bower_components/fitvids/jquery.fitvids.js', [], null, true );
+	    wp_enqueue_script( 'theme-scripts-main', get_template_directory_uri() . '/js/main.js', [], null, true );
 	} else {
 
 		// Load our main stylesheet.
@@ -243,25 +247,8 @@ function twentyfifteen_scripts() {
 	    // Load scripts
 	    wp_enqueue_script( 'theme-scripts-init', get_template_directory_uri() . '/dist/js/init.js', [], null, false );
 	    wp_enqueue_script( 'theme-scripts-main', get_template_directory_uri() . '/dist/js/main.js', [], null, true );
-
 	}
 
-
-	// wp_enqueue_script( 'twentyfifteen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20141010', true );
-
-	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-	// 	wp_enqueue_script( 'comment-reply' );
-	// }
-
-	// if ( is_singular() && wp_attachment_is_image() ) {
-	// 	wp_enqueue_script( 'twentyfifteen-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20141010' );
-	// }
-
-	// wp_enqueue_script( 'twentyfifteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
-	// wp_localize_script( 'twentyfifteen-script', 'screenReaderText', array(
-	// 	'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'twentyfifteen' ) . '</span>',
-	// 	'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'twentyfifteen' ) . '</span>',
-	// ) );
 }
 add_action( 'wp_enqueue_scripts', 'twentyfifteen_scripts' );
 
@@ -383,14 +370,14 @@ function twentyfifteen_entry_meta() {
 		printf( '<span class="sticky-post">%s</span>', __( 'Featured', 'twentyfifteen' ) );
 	}
 
-	$format = get_post_format();
-	if ( current_theme_supports( 'post-formats', $format ) ) {
-		printf( '<span class="entry-format">%1$s<a href="%2$s">%3$s</a></span>',
-			sprintf( '<span class="screen-reader-text">%s </span>', _x( 'Format', 'Used before post format.', 'twentyfifteen' ) ),
-			esc_url( get_post_format_link( $format ) ),
-			get_post_format_string( $format )
-		);
-	}
+	// $format = get_post_format();
+	// if ( current_theme_supports( 'post-formats', $format ) ) {
+	// 	printf( '<span class="entry-format">%1$s<a href="%2$s">%3$s</a></span>',
+	// 		sprintf( '<span class="screen-reader-text">%s </span>', _x( 'Format', 'Used before post format.', 'twentyfifteen' ) ),
+	// 		esc_url( get_post_format_link( $format ) ),
+	// 		get_post_format_string( $format )
+	// 	);
+	// }
 
 	if ( in_array( get_post_type(), array( 'post', 'attachment' ) ) ) {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
